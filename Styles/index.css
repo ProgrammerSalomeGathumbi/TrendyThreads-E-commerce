@@ -1,5 +1,5 @@
 .navbar-custom {
-    background-color: #f8f9fa;
+    background-color: fa;
 }
 
 .navbar-custom .navbar-brand {
@@ -46,7 +46,8 @@
     align-items: center;
     padding: 20px;
     background-color: beige;
-}
+    border: 1px black;
+ }
 
 .feature {
     text-align: center;
