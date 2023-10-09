@@ -1,0 +1,15 @@
+.navbar-custom {
+    background-color: #f8f9fa;
+}
+
+.navbar-custom .navbar-brand {
+    font-family: 'FancyFont', cursive;
+}
+
+.navbar-custom .cart-icon {
+    margin-right: 20px;
+}
+.navbar-brand {
+    font-family: 'FancyFont', cursive;
+    font-size: 24px; 
+}
