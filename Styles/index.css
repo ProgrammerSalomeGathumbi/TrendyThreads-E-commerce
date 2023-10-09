@@ -13,7 +13,7 @@
     font-family: 'FancyFont', cursive;
     font-size: 24px; 
 }
-..banner {
+.banner {
     position: relative;
     text-align: left;
 }
@@ -32,4 +32,11 @@
     color: white;
     font-size: 36px; 
     font-weight: bold; 
+}
+.section-heading {
+    text-align: center;
+}
+.btn-custom {
+    background-color: gray;
+    color: black;
 }
