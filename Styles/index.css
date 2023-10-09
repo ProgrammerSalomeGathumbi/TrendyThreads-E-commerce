@@ -40,3 +40,41 @@
     background-color: gray;
     color: black;
 }
+.features-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    background-color: beige;
+}
+
+.feature {
+    text-align: center;
+    
+}
+
+.feature i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+.blog-section {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.blog-post {
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.blog-post img {
+    max-width: 150px;
+    margin-right: 20px;
+}
+
+.text {
+    text-align: left;
+}
