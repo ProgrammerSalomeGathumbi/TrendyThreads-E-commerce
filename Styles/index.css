@@ -27,14 +27,17 @@
 .banner-text {
     position: absolute;
     top: 50%;
-    left: 10%; 
+    left: 40%;
     transform: translateY(-50%);
-    color: white;
+    color: rgb(14, 14, 14);
     font-size: 36px; 
     font-weight: bold; 
     text-align: center;
 }
 .section-heading {
+    text-align: center;
+}
+.card-body {
     text-align: center;
 }
 .btn-custom {
@@ -47,7 +50,7 @@
     align-items: center;
     padding: 20px;
     background-color: beige;
-    border: 1px black;
+    border: 5px black;
  }
 
 .feature {
@@ -58,6 +61,10 @@
 .feature i {
     font-size: 2rem;
     margin-bottom: 10px;
+}
+.blog {
+    text-align: center;
+    padding: 20px;
 }
 .blog-section {
     display: flex;
@@ -79,4 +86,39 @@
 
 .text {
     text-align: left;
+}
+.bottom-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+.address,
+.useful-links,
+.newsletter {
+    max-width: 300px;
+}
+
+form {
+    display: flex;
+}
+
+input[type="email"] {
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
