@@ -1,5 +1,6 @@
 .navbar-custom {
-    background-color: fa;
+    background-color: white;
+    font-family: 'FancyFont', cursive;
 }
 
 .navbar-custom .navbar-brand {
@@ -13,6 +14,7 @@
     font-family: 'FancyFont', cursive;
     font-size: 24px; 
 }
+
 .banner {
     position: relative;
     text-align: left;
@@ -33,29 +35,33 @@
     font-size: 36px; 
     font-weight: bold; 
     text-align: center;
+    font-family: 'FancyFont', cursive;
 }
 .section-heading {
     text-align: center;
+    font-family: 'FancyFont', cursive;
 }
 .card-body {
     text-align: center;
+    font-family: 'FancyFont', cursive;
 }
 .btn-custom {
     background-color: gray;
-    color: black;
+    color: white;
+    font-family: 'FancyFont', cursive;
 }
 .features-section {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 20px;
-    background-color: beige;
+    background-color: lightgrey;
     border: 5px black;
  }
 
 .feature {
     text-align: center;
-    
+    font-family: 'FancyFont', cursive;
 }
 
 .feature i {
@@ -65,11 +71,13 @@
 .blog {
     text-align: center;
     padding: 20px;
+    font-family: 'FancyFont', cursive;
 }
 .blog-section {
     display: flex;
     justify-content: center;
     padding: 20px;
+    font-family: 'FancyFont', cursive;
 }
 
 .blog-post {
@@ -86,12 +94,14 @@
 
 .text {
     text-align: left;
+    font-family: 'FancyFont', cursive;
 }
 .bottom-section {
     display: flex;
     justify-content: space-around;
     background-color: lightgray;
     padding: 20px;
+    font-family: 'FancyFont', cursive;
 }
 
 .address,
