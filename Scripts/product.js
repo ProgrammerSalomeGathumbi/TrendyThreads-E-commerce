@@ -30,10 +30,23 @@ get(productRef).then((snapshot) => {
 
         // Create product details HTML
         const productDetailsHTML = `
+    <div class="product-grid">
+        <div class="product-image">
             <img src="${product.productImage}" alt="${product.productName}" class="">
-            <h2>${product.productName}</h2>
-            <p>${product.productPrice}</p>
-            <button id="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-info">
+            <div class="product-title">
+                <h2>${product.productName}</h2>
+            </div>
+            <div class="product-price">
+                <p>$${product.productPrice}</p>
+                <p>${product.productDescription}</p>
+            </div>
+            <div class="product-button">
+                <button id="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </div>
         `;
 
         // Set product details in the container

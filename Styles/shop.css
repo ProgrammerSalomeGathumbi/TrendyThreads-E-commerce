@@ -69,12 +69,15 @@ button:hover {
 .show {
     display: block;
 }
-#products-container {
+/* Add this CSS to style the grid layout */
+.product-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid with minimum 200px width for each column */
     gap: 20px; /* Gap between grid items */
+    justify-content: center; /* Center the grid items */
 }
 
+/* Style individual product within the grid */
 .product {
     display: flex;
     flex-direction: column;
@@ -87,4 +90,12 @@ button:hover {
 .product img {
     width: 100%; /* Make sure the image takes 100% width of its container */
     height: auto; /* Maintain aspect ratio */
+}
+
+.product h4 {
+    margin-top: 10px; /* Add spacing between image and product name */
+}
+
+.product p {
+    margin-top: 5px; /* Add spacing between product name and price */
 }

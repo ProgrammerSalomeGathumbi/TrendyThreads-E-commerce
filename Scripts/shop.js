@@ -19,39 +19,74 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10
     const database = getDatabase(app);
 
     function displayProducts(category, categoryId) {
-    const categorySection = document.getElementById(categoryId);
-    const displayedProducts = []; // Array to store displayed product IDs
-
-    const productsRef = ref(database, 'Products');
-
-    onValue(productsRef, (snapshot) => {
-        // Loop through products and create HTML elements dynamically
-        snapshot.forEach((productSnapshot) => {
-            const product = productSnapshot.val();
-
-            // Check if the product belongs to the specified category and is not already displayed
-            if (product.productCategory === category && !displayedProducts.includes(productSnapshot.key)) {
+        const categorySection = document.getElementById(categoryId);
+        const displayedProducts = []; // Array to store displayed product IDs
+    
+        const productsRef = ref(database, 'Products');
+    
+        onValue(productsRef, (snapshot) => {
+            // Filter products by category and create an array of product objects
+            const products = snapshotToArray(snapshot).filter(product => product.productCategory === category);
+    
+            // Create a grid container for the category
+            const categoryGrid = document.createElement('div');
+            categoryGrid.className = 'product-grid';
+    
+            // Loop through products and create HTML elements dynamically
+            products.forEach((product) => {
                 // Add the product ID to the displayed products array
-                displayedProducts.push(productSnapshot.key);
-
-                // Create HTML elements for the product
-                const productContainer = document.createElement('a');
-productContainer.href = `product.html?id=${productSnapshot.key}`; // Dynamically create the product page URL with the product ID
-productContainer.className = 'product';
-productContainer.innerHTML = `
-    <img src="${product.productImage}" alt="${product.productName}">
-    <h3>${product.productName}</h3>
-    <p>$${product.productPrice}</p>
-`;
-
-                // Append the product container to the category section
-                categorySection.appendChild(productContainer);
-            }
+                displayedProducts.push(product.id);
+    
+                // Create product container
+                const productContainer = document.createElement('div');
+                productContainer.className = 'product';
+    
+                // Create product details div
+                const productDetails = document.createElement('div');
+                productDetails.className = 'product-details';
+    
+                // Create image element
+                const img = document.createElement('img');
+                img.src = product.productImage;
+                img.alt = product.productName;
+    
+                // Create name element
+                const name = document.createElement('h4');
+                name.textContent = product.productName;
+    
+                // Create price element
+                const price = document.createElement('p');
+                price.textContent = `$${product.productPrice}`;
+    
+                // Append image, name, and price to product details
+                productDetails.appendChild(img);
+                productDetails.appendChild(name);
+                productDetails.appendChild(price);
+    
+                // Append product details to the product container
+                productContainer.appendChild(productDetails);
+    
+                // Append the product container to the category grid
+                categoryGrid.appendChild(productContainer);
+            });
+    
+            // Append the category grid to the category section
+            categorySection.appendChild(categoryGrid);
         });
-    });
-}
-
-
-displayProducts('black-tees', 'black-tees');
-displayProducts('red-tees', 'red-tees');
-displayProducts('hoodies', 'hoodies');
+    }
+    
+    // Helper function to convert Firebase snapshot to array of objects
+    function snapshotToArray(snapshot) {
+        const result = [];
+        snapshot.forEach(childSnapshot => {
+            const item = childSnapshot.val();
+            item.id = childSnapshot.key;
+            result.push(item);
+        });
+        return result;
+    }
+    
+    displayProducts('black-tees', 'black-tees');
+    displayProducts('red-tees', 'red-tees');
+    displayProducts('hoodies', 'hoodies');
+    
