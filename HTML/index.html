@@ -9,32 +9,40 @@
     <title>TrendyThreads</title>
 </head>
 <body>
-<div>
-    <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
-        <div class="container">
-            <div class="container d-flex justify-content-center">
-                <a class="navbar-brand" href="#">TrendyThreads</a>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom">
+            <div class="container">
+                <div class="container d-flex justify-content-center">
+                    <a class="navbar-brand" href="#">TrendyThreads</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" id="shopDropdown">Shop</a>
+                            <div class="dropdown-content" id="shopDropdownContent">
+                                <a href="#black-tees">Black Tee</a>
+                                <a href="#red-tees">Red Tee</a>
+                                <a href="#hoodies">Hoodies</a>
+                                <a href="#special">Special</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Shop</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-</div>
+        </nav>
+    </div>
+    
  <!-- Banner Section -->
  <div class="banner">
     <img src="../Images/Banner-website.png" alt="Shop Banner">
@@ -145,5 +153,6 @@
     integrity="sha384-dsQiP6kQ0LlMS3kdKt2+7jrAdSIpO2gS+Swls1i8bZl5+d1ZAxNV8l3OJu0OZfF" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-Pf0F/+yo0iPo7ZjOy8mH8nQLIv8aIV07pV43eLvG9AgRDjhilxdz2j6p0n2O1kr" crossorigin="anonymous"></script>
+    <script src="../Scripts/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,90 @@
+.navbar-custom {
+    background-color: white;
+    font-family: 'FancyFont', cursive;
+}
+
+.navbar-custom .navbar-brand {
+    font-family: 'FancyFont', cursive;
+}
+
+.navbar-custom .cart-icon {
+    margin-right: 20px;
+}
+.navbar-brand {
+    font-family: 'FancyFont', cursive;
+    font-size: 24px; 
+}
+.btn-custom {
+    background-color: gray;
+    color: white;
+    font-family: 'FancyFont', cursive;
+}
+.bottom-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightgray;
+    padding: 20px;
+    font-family: 'FancyFont', cursive;
+    flex-direction: column;
+}
+
+.address,
+.useful-links,
+.newsletter {
+    max-width: 300px;
+}
+
+form {
+    display: flex;
+}
+
+input[type="email"] {
+    width: 70%;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+@media (min-width: 768px) {
+    .bottom-section {
+        flex-direction: row; 
+    }
+}
+.dropdown-content {
+    display: none;
+}
+
+
+.show {
+    display: block;
+}
+#products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid with minimum 200px width for each column */
+    gap: 20px; /* Gap between grid items */
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none; /* Remove default underline from anchor elements */
+    color: inherit; /* Inherit text color from parent */
+}
+
+.product img {
+    width: 100%; /* Make sure the image takes 100% width of its container */
+    height: auto; /* Maintain aspect ratio */
+}
