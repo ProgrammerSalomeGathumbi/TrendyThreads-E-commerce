@@ -20,7 +20,7 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10
 
     function displayProducts(category, categoryId) {
         const categorySection = document.getElementById(categoryId);
-        const displayedProducts = []; // Array to store displayed product IDs
+        const displayedProducts = new Set();
     
         const productsRef = ref(database, 'Products');
     
@@ -34,8 +34,9 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10
     
             // Loop through products and create HTML elements dynamically
             products.forEach((product) => {
-                // Add the product ID to the displayed products array
-                displayedProducts.push(product.id);
+                // Check if the product is not already displayed
+            if (!displayedProducts.has(product.id)) {
+                displayedProducts.add(product.id); // Add product ID to the Set
     
                 // Create product container
                 const productContainer = document.createElement('div');
@@ -68,6 +69,7 @@ import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10
     
                 // Append the product container to the category grid
                 categoryGrid.appendChild(productContainer);
+              }
             });
     
             // Append the category grid to the category section

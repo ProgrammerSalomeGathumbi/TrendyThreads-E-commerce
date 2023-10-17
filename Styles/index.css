@@ -14,6 +14,28 @@
     font-family: 'FancyFont', cursive;
     font-size: 24px; 
 }
+/* Apply styles to nav items in navbar-right section */
+.navbar-right .nav-item .nav-link {
+    color: #333;
+    font-family: 'FancyFont', cursive;
+    font-size: 16px;
+    text-decoration: none; /* remove underline from links */
+    margin: 0 10px; /* adjust margin as needed */
+    font-weight: normal;
+}
+
+/* Apply styles to the cart count */
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 40%;
+    padding: 5px 5px;
+    font-size: 10px;
+    position: relative;
+    top: -3px; /* adjust vertical position */
+    margin-left: 5px; /* adjust horizontal position */
+}
+
 
 .banner {
     position: relative;
@@ -37,6 +59,7 @@
     text-align: center;
     font-family: 'FancyFont', cursive;
 }
+
 .section-heading {
     text-align: center;
     font-family: 'FancyFont', cursive;
@@ -134,6 +157,9 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+
+
 @media (min-width: 768px) {
     /* Banner */
     .banner-text {
@@ -156,11 +182,16 @@ button:hover {
         flex-direction: row; 
     }
 }
-.dropdown-content {
-    display: none;
-}
 
+/* Media query for screens larger than or equal to 992px */
+@media (min-width: 992px) {
+    /* Navbar */
+    .navbar-custom .navbar-brand {
+        font-size: 32px; 
+    }
 
-.show {
-    display: block;
+       /* Features Section */
+    .feature i {
+        font-size: 2.5rem;
+    }
 }
