@@ -28,21 +28,20 @@ function updateUserStatus() {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             // User is signed in
-            userInfo.textContent = `Welcome, ${user.email}!`;
+            userInfo.textContent = `Welcome, ${user.displayName}!`;
             signInBtn.style.display = "none";
             signOutBtn.style.display = "block";
-
-            // You can fetch the cart count from your database and update cartCountElement
-            const cartCount = 0; // Replace this with the actual cart count fetched from the database
-            cartCountElement.textContent = cartCount;
         } else {
             // User is signed out
-            userInfo.textContent = "Welcome, Guest!";
+            userInfo.textContent = "Guest";
             signInBtn.style.display = "block";
             signOutBtn.style.display = "none";
-            cartCountElement.textContent = "0";
         }
     });
+
+    // You can fetch the cart count from your database and update cartCountElement
+    const cartCount = 0; // Replace this with the actual cart count fetched from the database
+    cartCountElement.textContent = cartCount;
 }
 
 // Event listener for sign out button

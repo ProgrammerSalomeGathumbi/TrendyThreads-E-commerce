@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -15,6 +16,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
+const auth = getAuth(app);
 
 // Get product ID from the URL query parameter
 const urlParams = new URLSearchParams(window.location.search);
@@ -22,11 +24,12 @@ const productId = urlParams.get('id');
 
 // Reference to the specific product in the database
 const productRef = ref(database, `Products/${productId}`);
+const productDetailsContainer = document.querySelector('.product-details');
 
 get(productRef).then((snapshot) => {
     if (snapshot.exists()) {
         const product = snapshot.val();
-        const productDetailsContainer = document.querySelector('.product-details');
+        
 
         // Create product details HTML
         const productDetailsHTML = `
@@ -49,19 +52,32 @@ get(productRef).then((snapshot) => {
     </div>
         `;
 
-        // Set product details in the container
         productDetailsContainer.innerHTML = productDetailsHTML;
 
-        // Add event listener for the "Add to Cart" button
         const addToCartButton = document.getElementById('add-to-cart');
         addToCartButton.addEventListener('click', () => {
-            // Implement your add to cart functionality here
-            // You can use local storage or another method to store the cart items
-            console.log('Product added to cart:', product.productName);
+            onAuthStateChanged(auth, (user) => {
+                let userLoggedIn = false; // Declare userLoggedIn variable here
+
+                if (user) {
+                    console.log('User is logged in:', user.uid);
+                    userLoggedIn = true;
+                } else {
+                    console.log('User is not logged in');
+                }
+
+                if (userLoggedIn) {
+                    window.location.href = '../HTML/add-to-cart.html?id=' + productId;
+                } else {
+                    alert('Please login to add the product to your cart.');
+                    window.location.href = '../HTML/login.html';
+                }
+            });
         });
     } else {
         console.log('Product not found');
     }
-}).catch((error) => {
+})
+.catch((error) => {
     console.error('Error fetching product:', error);
 });

@@ -37,89 +37,7 @@
 }
 
 
-.banner {
-    position: relative;
-    text-align: left;
-}
 
-.banner img {
-    width: 100%;
-    height: auto; 
-    object-fit: cover; 
-}
-
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 40%;
-    transform: translateY(-50%, -50%);
-    color: rgb(14, 14, 14);
-    font-size: 24px; 
-    font-weight: bold; 
-    text-align: center;
-    font-family: 'FancyFont', cursive;
-}
-
-.section-heading {
-    text-align: center;
-    font-family: 'FancyFont', cursive;
-}
-.card-body {
-    text-align: center;
-    font-family: 'FancyFont', cursive;
-}
-.btn-custom {
-    background-color: gray;
-    color: white;
-    font-family: 'FancyFont', cursive;
-}
-.features-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-color: lightgrey;
-    border: 5px black;
-    flex-direction: column;
- }
-
-.feature {
-    text-align: center;
-    font-family: 'FancyFont', cursive;
-}
-
-.feature i {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-.blog {
-    text-align: center;
-    padding: 20px;
-    font-family: 'FancyFont', cursive;
-}
-.blog-section {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    font-family: 'FancyFont', cursive;
-}
-
-.blog-post {
-    display: flex;
-    align-items: center;
-    max-width: 600px;
-    margin-bottom: 20px;
-}
-
-.blog-post img {
-    max-width: 100px;
-    margin-right: 10px;
-}
-
-.text {
-    text-align: left;
-    font-family: 'FancyFont', cursive;
-}
 .bottom-section {
     display: flex;
     justify-content: space-around;
@@ -191,9 +109,7 @@ button:hover {
     }
 
        /* Features Section */
-    .feature i {
-        font-size: 2.5rem;
-    }
+   
 }
 .user-bar {
     display: flex;
@@ -221,4 +137,31 @@ button:hover {
     text-decoration: none;
     color: #333;
     font-weight: normal;
+}
+.row {
+    margin-bottom: 20px;
+    flex: 1;
+    flex-wrap: wrap; /* Add this property to allow elements to wrap */
+}
+.cart-summary {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px; /* Add margin-top to separate cart summary from product cards */
+}
+/* Adjustments for smaller screens */
+@media (max-width: 767px) {
+    .cart-summary {
+        margin-top: 20px;
+    }
+}
+@media (min-width: 992px) {
+    .cart-summary {
+        margin-top: 0; /* Remove margin-top to align cart summary with products in cart */
+    }
+}
+@media (max-width: 991px) {
+    .cart-summary {
+        margin-top: 20px; /* Add margin-top to separate cart summary from products in cart */
+    }
 }

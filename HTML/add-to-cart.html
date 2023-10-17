@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../Styles/index.css">
-    <title>TrendyThreads</title>
+    <link rel="stylesheet" href="../Styles/add-to-cart.css">
+    <title>Cart</title>
 </head>
 <body>
     <div class="user-bar">
@@ -46,56 +46,34 @@
             </div>
         </div>
         </div>
-    
-    
- <!-- Banner Section -->
- <div class="banner">
-    <img src="../Images/Banner-website.png" alt="Shop Banner">
-    <div class="banner-text">
-        <h1>Welcome to Our Shop</h1>
-    </div>
-</div>
- <!-- Trendy Products Section -->
-    <div class="container mt-5">
-        <h2 class="section-heading">Trendy Products</h2>
-        <div class="row" id="trendy-products-container">
-            <!-- Products will be added here dynamically -->
+        
+        <div class="container mt-5">
+            <!-- Products in Cart Row -->
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2>Products in Cart</h2>
+                    <div class="cart-products" id="cart-products">
+                        <!-- Cart products will be added here dynamically -->
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Cart Summary Row -->
+            <div class="row mt-4">
+                <div class="col-lg-12">
+                    <div class="cart-summary">
+                        <h2>Cart Summary</h2>
+                        <div>Total Items: <span id="total-items">0</span></div>
+                        <div>Total Price: $<span id="total-price">0.00</span></div>
+                        <button class="btn btn-primary mt-3" id="checkout-btn">Checkout</button>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
+        
+
     
-<div class="features-section">
-    <div class="feature">
-        <i class="fas fa-clock"></i>
-        <p>24-Hour Support</p>
-    </div>
-    <div class="feature">
-        <i class="fas fa-truck"></i>
-        <p>Free Shipping</p>
-    </div>
-    <div class="feature">
-        <i class="fas fa-leaf"></i>
-        <p>Environmentally Friendly</p>
-    </div>
-</div>
-<div class="blog"><h2>Latest Posts</h2>
-<div class="blog-section">
-    
-    <div class="blog-post">
-        <img src="../Images/Blog/drink-84533_1280.jpg" alt="Summer Fashion">
-        <div class="text">
-            <h3>How to Style for the Summer</h3>
-            <p>Explore the latest summer fashion trends and learn how to style your outfits for the sunny days.</p>
-        </div>
-    </div>
-    <div class="blog-post">
-        <img src="../Images/Blog/fall.jpg" alt="Fall Fashion">
-        <div class="text">
-            <h3>Our Top 10 Fall Trends</h3>
-            <p>Discover the top fashion trends for fall, from cozy sweaters to chic accessories.</p>
-        </div>
-    </div>
-</div>
-</div>
+
 <div class="bottom-section">
     <div class="address">
         <h4>Our Store Address</h4>
@@ -128,7 +106,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-Pf0F/+yo0iPo7ZjOy8mH8nQLIv8aIV07pV43eLvG9AgRDjhilxdz2j6p0n2O1kr" crossorigin="anonymous"></script>
 
-    <script type="module" src="../Scripts/index.js"></script>
+    <script type="module" src="../Scripts/add-to-cart.js"></script>
     <script type="module" src="../Scripts/navbar.js"></script>
  </body>
 </html>
