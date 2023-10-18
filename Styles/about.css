@@ -35,11 +35,9 @@
     top: -3px; /* adjust vertical position */
     margin-left: 5px; /* adjust horizontal position */
 }
-.btn-custom {
-    background-color: gray;
-    color: white;
-    font-family: 'FancyFont', cursive;
-}
+
+
+
 .bottom-section {
     display: flex;
     justify-content: space-around;
@@ -47,12 +45,6 @@
     padding: 20px;
     font-family: 'FancyFont', cursive;
     flex-direction: column;
-}
-
-.address,
-.useful-links,
-.newsletter {
-    max-width: 300px;
 }
 
 form {
@@ -77,12 +69,26 @@ button {
 button:hover {
     background-color: #45a049;
 }
+
+
+
 @media (min-width: 768px) {
+   
+
+    /* Bottom Section */
     .bottom-section {
         flex-direction: row; 
     }
 }
 
+/* Media query for screens larger than or equal to 992px */
+@media (min-width: 992px) {
+    /* Navbar */
+    .navbar-custom .navbar-brand {
+        font-size: 32px; 
+    }
+
+ }
 .user-bar {
     display: flex;
     align-items: center;
@@ -110,6 +116,29 @@ button:hover {
     color: #333;
     font-weight: normal;
 }
+.customer-reviews {
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.customer-review {
+    display: none; /* Hide reviews by default */
+    font-style: italic; /* Italicize the reviews */
+    padding: 20px; /* Add padding for better visibility */
+}
+
+.show-review {
+    display: block; /* Display the review with class 'show-review' */
+    animation: fadeIn 1s ease; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with 0 opacity */
+    }
+    to {
+        opacity: 1; /* Fade in to 100% opacity */
+    }
+}
 .social-media {
     margin-bottom: 20px;
 }
@@ -124,26 +153,4 @@ button:hover {
     margin-top: 20px;
     font-size: 14px;
     color: #555;
-}
-.product-category {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 18px;
-    padding-top: 20px;
-}
-.product-category row{
-    margin-bottom: 20px;
-   
-}
-.product {
-    margin: 20px ; /* Adjust vertical margin as needed */
-    gap: 20;
-}
-.product img {
-
-    width: 200px;
-}
-.product h4,
-.product p {
-    color: black;
 }

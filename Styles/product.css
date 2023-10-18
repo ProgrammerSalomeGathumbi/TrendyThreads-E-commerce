@@ -13,6 +13,7 @@
 .navbar-brand {
     font-family: 'FancyFont', cursive;
     font-size: 24px; 
+ 
 }
 /* Apply styles to nav items in navbar-right section */
 .navbar-right .nav-item .nav-link {
@@ -35,6 +36,7 @@
     top: -3px; /* adjust vertical position */
     margin-left: 5px; /* adjust horizontal position */
 }
+
 .btn-custom {
     background-color: gray;
     color: white;
@@ -49,11 +51,6 @@
     flex-direction: column;
 }
 
-.address,
-.useful-links,
-.newsletter {
-    max-width: 300px;
-}
 
 form {
     display: flex;
@@ -125,4 +122,46 @@ button:hover {
 
 .product-button button:hover {
     background-color: lightgrey;
+}
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+}
+.user-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: #f2f2f2;
+    font-size: 10px;
+}
+
+.user-info,
+.sign-in-btn,
+.log-in-btn,
+.sign-out-btn,
+.cart-info {
+    margin-right: 20px;
+}
+
+.user-info {
+    font-weight: normal;
+}
+
+.sign-in-btn a,
+.log-in-btn a {
+    text-decoration: none;
+    color: #333;
+    font-weight: normal;
 }

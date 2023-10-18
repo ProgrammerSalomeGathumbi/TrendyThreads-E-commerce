@@ -47,12 +47,6 @@
     flex-direction: column;
 }
 
-.address,
-.useful-links,
-.newsletter {
-    max-width: 300px;
-}
-
 form {
     display: flex;
 }
@@ -164,4 +158,19 @@ button:hover {
     .cart-summary {
         margin-top: 20px; /* Add margin-top to separate cart summary from products in cart */
     }
+}
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
 }

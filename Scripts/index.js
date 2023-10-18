@@ -68,4 +68,28 @@ async function renderTrendyProducts() {
 
 // Call the function to render trendy products
 renderTrendyProducts();
-  
+  // JavaScript code to show reviews one at a time
+const reviews = document.querySelectorAll('.customer-review');
+let currentIndex = 0;
+
+function showReview(index) {
+    reviews[index].classList.add('show-review');
+}
+
+function hideAllReviews() {
+    reviews.forEach(review => {
+        review.classList.remove('show-review');
+    });
+}
+
+function nextReview() {
+    hideAllReviews();
+    currentIndex = (currentIndex + 1) % reviews.length;
+    showReview(currentIndex);
+}
+
+// Show the first review initially
+showReview(currentIndex);
+
+// Set interval to show next review every 5 seconds
+setInterval(nextReview, 5000);

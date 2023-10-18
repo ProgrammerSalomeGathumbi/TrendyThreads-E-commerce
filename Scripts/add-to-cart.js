@@ -81,6 +81,6 @@ window.addEventListener("load", loadCartData);
 const checkoutButton = document.getElementById("checkout-btn");
 checkoutButton.addEventListener("click", () => {
     // Implement checkout logic here
-    // Redirect to a checkout page or perform other actions
+    window.location.href = '../HTML/checkout.html';
     console.log("Checkout button clicked.");
 });

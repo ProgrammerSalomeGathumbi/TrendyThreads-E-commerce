@@ -12,6 +12,22 @@
   </head>
 
 <body>
+    <div class="user-bar">
+        <div id="user-info" class="user-info"></div>
+        <div id="sign-in-btn" class="sign-in-btn">
+            <a href="../HTML/signup.html">Sign Up</a>
+        </div>
+        <div id="log-in-btn" class="log-in-btn">
+            <a href="../HTML/login.html">Login</a>
+        </div>
+        <div id="sign-out-btn" class="sign-out-btn">
+            <a >Sign Out</a>
+        </div>
+        <div id="cart-info" class="cart-info">
+            Cart: <span id="cart-count">0</span>
+        </div>
+    </div>
+    
     <div class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="../HTML/index.html">TrendyThreads</a>
@@ -27,59 +43,49 @@
                         <a class="nav-link" href="../HTML/Shop.html">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../HTML/Blog.html">Blog</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar-right">
-                <ul class="navbar-nav ml-auto">
-                   
-                                        <li class="nav-item">
-                        <a class="nav-link" href="../HTML/signup.html">Sign-up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../HTML/login.html">Login</a>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
-                        </li>
+                        <a class="nav-link" href="../HTML/about.html">About</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
+        </div>
   <!-- shop.html -->
 
-<div class="container" id="products-container" >
-    <section id="black-tees">
-      <h3>Black Tee Collection</h3>
-      <!-- Products will be displayed here dynamically -->
+<!-- shop.html -->
+<div class="container" id="products-container">
+    <section id="black-tees" class="product-category row">
+        <h3>Black Tee Collection</h3>
+        <div class="col-lg-12 mb-4">
+            <!-- Products will be displayed here dynamically with class="product col-md-4" -->
+        </div>
     </section>
-  
-    <section id="red-tees">
-      <h3>Red Tee Collection</h3>
-      <!-- Products will be displayed here dynamically -->
+
+    <section id="red-tees" class="product-category row">
+        <h3>Red Tee Collection</h3>
+        <div class="col-lg-12 mb-4">
+            <!-- Products will be displayed here dynamically with class="product col-md-4" -->
+        </div>
     </section>
-  
-    <section id="hoodies">
-      <h3>Hoodies Collection</h3>
-      <!-- Products will be displayed here dynamically -->
+
+    <section id="hoodies" class="product-category row">
+        <h3 >Hoodies Collection</h3>
+        <div class="col-lg-12 mb-4">
+        <!-- Products will be displayed here dynamically with class="product col-md-4" -->
+    </div>
     </section>
-  
-    
-  </div>
-  
-  <div class="bottom-section">
+
+</div>
+<div class="bottom-section">
     <div class="address">
         <h4>Our Store Address</h4>
         <p>123 Fashion Street, Trendy Town, Fashionland</p>
     </div>
-    <div class="useful-links">
-        <h4>Useful Links</h4>
-        <ul>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">Shipping Information</a></li>
-            <li><a href="#">Returns & Exchanges</a></li>
-        </ul>
+    <div class="social-media">
+        <h4>Follow Us</h4>
+        <!-- Font Awesome icons for social media -->
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
     </div>
     <div class="newsletter">
         <h4>Subscribe to Our Newsletter</h4>
@@ -88,8 +94,12 @@
             <button type="submit">Subscribe</button>
         </form>
     </div>
-</div>     
- 
+    
+</div>
+
+<div class="copyright">
+    <p>&copy; 2023 TrendyThreads. All rights reserved.</p>
+</div>
 
 <script type="module" src="../Scripts/shop.js"></script>
 <script type="module" src="../Scripts/navbar.js"></script>

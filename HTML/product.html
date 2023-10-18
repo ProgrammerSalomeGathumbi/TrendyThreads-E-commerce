@@ -9,6 +9,22 @@
     <title>TrendyThreads</title>
 </head>
 <body>
+    <div class="user-bar">
+        <div id="user-info" class="user-info"></div>
+        <div id="sign-in-btn" class="sign-in-btn">
+            <a href="../HTML/signup.html">Sign Up</a>
+        </div>
+        <div id="log-in-btn" class="log-in-btn">
+            <a href="../HTML/login.html">Login</a>
+        </div>
+        <div id="sign-out-btn" class="sign-out-btn">
+            <a >Sign Out</a>
+        </div>
+        <div id="cart-info" class="cart-info">
+            Cart: <span id="cart-count">0</span>
+        </div>
+    </div>
+    
     <div class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="../HTML/index.html">TrendyThreads</a>
@@ -24,27 +40,12 @@
                         <a class="nav-link" href="../HTML/Shop.html">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../HTML/Blog.html">Blog</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="navbar-right">
-                <ul class="navbar-nav ml-auto">
-                   
-                                        <li class="nav-item">
-                        <a class="nav-link" href="../HTML/signup.html">Sign-up</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../HTML/login.html">Login</a>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></a>
-                        </li>
+                        <a class="nav-link" href="../HTML/about.html">About</a>
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-    
+        </div>
     <div class="product-container">
        <div class="product-details"></div>
     </div>
@@ -53,13 +54,12 @@
             <h4>Our Store Address</h4>
             <p>123 Fashion Street, Trendy Town, Fashionland</p>
         </div>
-        <div class="useful-links">
-            <h4>Useful Links</h4>
-            <ul>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Shipping Information</a></li>
-                <li><a href="#">Returns & Exchanges</a></li>
-            </ul>
+        <div class="social-media">
+            <h4>Follow Us</h4>
+            <!-- Font Awesome icons for social media -->
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
         </div>
         <div class="newsletter">
             <h4>Subscribe to Our Newsletter</h4>
@@ -68,9 +68,12 @@
                 <button type="submit">Subscribe</button>
             </form>
         </div>
+        
     </div>
     
-    
+    <div class="copyright">
+        <p>&copy; 2023 TrendyThreads. All rights reserved.</p>
+    </div>
     
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KtLEt5/BFJyjNRfFf+cu0D5PB7xlZnEk8TAhAuKdGQn+8Z92n0Z4CkOY9iOz6XyB"

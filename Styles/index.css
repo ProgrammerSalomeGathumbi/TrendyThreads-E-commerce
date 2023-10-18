@@ -13,6 +13,7 @@
 .navbar-brand {
     font-family: 'FancyFont', cursive;
     font-size: 24px; 
+ 
 }
 /* Apply styles to nav items in navbar-right section */
 .navbar-right .nav-item .nav-link {
@@ -50,8 +51,8 @@
 
 .banner-text {
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 40%;
+    left: 30%;
     transform: translateY(-50%, -50%);
     color: rgb(14, 14, 14);
     font-size: 24px; 
@@ -97,29 +98,7 @@
     padding: 20px;
     font-family: 'FancyFont', cursive;
 }
-.blog-section {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    font-family: 'FancyFont', cursive;
-}
 
-.blog-post {
-    display: flex;
-    align-items: center;
-    max-width: 600px;
-    margin-bottom: 20px;
-}
-
-.blog-post img {
-    max-width: 100px;
-    margin-right: 10px;
-}
-
-.text {
-    text-align: left;
-    font-family: 'FancyFont', cursive;
-}
 .bottom-section {
     display: flex;
     justify-content: space-around;
@@ -129,11 +108,7 @@
     flex-direction: column;
 }
 
-.address,
-.useful-links,
-.newsletter {
-    max-width: 300px;
-}
+
 
 form {
     display: flex;
@@ -163,7 +138,7 @@ button:hover {
 @media (min-width: 768px) {
     /* Banner */
     .banner-text {
-        font-size: 36px; 
+        font-size: 16px; 
     }
 
     /* Features Section */
@@ -221,4 +196,42 @@ button:hover {
     text-decoration: none;
     color: #333;
     font-weight: normal;
+}
+.customer-reviews {
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.customer-review {
+    display: none; /* Hide reviews by default */
+    font-style: italic; /* Italicize the reviews */
+    padding: 20px; /* Add padding for better visibility */
+}
+
+.show-review {
+    display: block; /* Display the review with class 'show-review' */
+    animation: fadeIn 1s ease; /* Add fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with 0 opacity */
+    }
+    to {
+        opacity: 1; /* Fade in to 100% opacity */
+    }
+}
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
 }

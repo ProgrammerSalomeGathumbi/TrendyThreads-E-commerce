@@ -13,7 +13,6 @@
 .navbar-brand {
     font-family: 'FancyFont', cursive;
     font-size: 24px; 
- 
 }
 /* Apply styles to nav items in navbar-right section */
 .navbar-right .nav-item .nav-link {
@@ -37,6 +36,7 @@
     margin-left: 5px; /* adjust horizontal position */
 }
 
+
 .bottom-section {
     display: flex;
     justify-content: space-around;
@@ -46,12 +46,17 @@
     flex-direction: column;
 }
 
-form {
-    display: flex;
-    align-items: center;
+.address,
+.useful-links,
+.newsletter {
+    max-width: 300px;
 }
 
-input[type="email"], input[type="password"] {
+form {
+    display: flex;
+}
+
+input[type="email"] {
     width: 70%;
     padding: 8px;
     margin-right: 10px;
@@ -70,7 +75,10 @@ button:hover {
     background-color: #45a049;
 }
 
+
+
 @media (min-width: 768px) {
+   /* Bottom Section */
     .bottom-section {
         flex-direction: row; 
     }
@@ -78,110 +86,12 @@ button:hover {
 
 /* Media query for screens larger than or equal to 992px */
 @media (min-width: 992px) {
+    /* Navbar */
     .navbar-custom .navbar-brand {
         font-size: 32px; 
     }
-}
-/* Styles for the form container */
-.sign-container {
-    max-width: 400px;
-    margin: 20px auto; /* Added top and bottom margin to center the container */
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
 
-.sign-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: black;
-}
-
-/* Styles for form elements */
-.sign-form {
-    display: flex;
-    flex-direction: column; /* Display form elements in columns */
-    align-items: center; /* Center form elements horizontally */
-}
-
-/* Styles for labels */
-label {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; /* Make labels full width */
-    margin-bottom: 10px; /* Add margin between labels and inputs */
-}
-
-.sign-container input[type="email"],
-.sign-container input[type="password"] {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%; /* Make input fields full width */
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-}
-
-/* Styles for buttons */
-.sign-container button {
-    width: 100%;
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px; /* Add margin above the button */
-}
-
-.sign-container button:hover {
-    background-color: #333;
-}
-
-/* Styles for Google Sign In container */
-.google-container {
-    max-width: 400px;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.google-container h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: black;
-}
-
-.google-container button {
-    width: 100%;
-    background-color: #4285F4;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
-}
-
-.google-container button:hover {
-    background-color: #1a73e8;
-}
-.social-media {
-    margin-bottom: 20px;
-}
-
-.social-icon {
-    font-size: 24px;
-    margin-right: 10px;
-    color: #333;
-}
-.copyright {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #555;
+    
 }
 .user-bar {
     display: flex;
@@ -209,4 +119,123 @@ label {
     text-decoration: none;
     color: #333;
     font-weight: normal;
+}
+/* Checkout Form */
+.check-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Shipping Information Section */
+.shipping-section, .payment-section, .discount-section, .order-summary {
+    margin-bottom: 30px;
+}
+
+.shipping-section h3, .payment-section h3, .discount-section h3, .order-summary h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Discount Section */
+#discount-code {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#apply-discount-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#apply-discount-btn:hover {
+    background-color: #333;
+}
+
+/* Order Summary */
+#cart-summary {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-summary li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+#total-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#checkout-button {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-button:hover {
+    background-color: #333;
+}
+.social-media {
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+}
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
 }
