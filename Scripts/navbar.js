@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
-import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+import { getAuth, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
 import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js";
 
  // Firebase configuration
@@ -17,44 +17,41 @@ import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.5.0
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
   const database = getDatabase(app);
-// DOM elements
-const userInfo = document.getElementById("user-info");
-const signInBtn = document.getElementById("sign-in-btn");
-const signOutBtn = document.getElementById("sign-out-btn");
-const cartCountElement = document.getElementById("cart-count");
+  
 
-// Function to update user status and cart count
-function updateUserStatus() {
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-            // User is signed in
-            userInfo.textContent = `Welcome, ${user.displayName}!`;
-            signInBtn.style.display = "none";
-            signOutBtn.style.display = "block";
-        } else {
-            // User is signed out
-            userInfo.textContent = "Guest";
-            signInBtn.style.display = "block";
-            signOutBtn.style.display = "none";
-        }
+  // Function to handle sign-in, sign-out, and guest mode toggle
+  function toggleAuth() {
+    const user = auth.currentUser;
+    const toggleBtn = document.getElementById('toggle-auth-btn');
+    const cartIcon = document.getElementById('cart-info'); // Assuming you have a cart icon element with the ID 'cart-icon'
+
+    // Event listener for the cart icon
+    cartIcon.addEventListener('click', () => {
+        window.location.href = 'cart.html'; // Redirect to cart.html when the cart icon is clicked
     });
 
-    // You can fetch the cart count from your database and update cartCountElement
-    const cartCount = 0; // Replace this with the actual cart count fetched from the database
-    cartCountElement.textContent = cartCount;
+    if (user) {
+        // User is signed in, show sign out option
+        toggleBtn.textContent = 'Sign Out';
+        toggleBtn.addEventListener('click', () => {
+            auth.signOut().then(() => {
+                // Sign-out successful.
+                toggleBtn.textContent = 'Guest Mode';
+                console.log('User signed out.');
+            }).catch((error) => {
+                // An error happened.
+                console.error(error);
+            });
+        });
+    } else {
+        // User is not signed in, show sign in option
+        toggleBtn.textContent = 'Guest Mode';
+        toggleBtn.addEventListener('click', () => {
+            // Implement your guest mode logic here if needed
+            console.log('Guest mode activated.');
+        });
+    }
 }
 
-// Event listener for sign out button
-signOutBtn.addEventListener("click", () => {
-    // Sign out the user
-    signOut(auth).then(() => {
-        // User is signed out
-        console.log("User signed out");
-    }).catch((error) => {
-        // Handle errors here
-        console.error(error);
-    });
-});
-
-// Call the function to update user status and cart count
-updateUserStatus();
+// Call the toggleAuth function to set up the initial state
+toggleAuth();

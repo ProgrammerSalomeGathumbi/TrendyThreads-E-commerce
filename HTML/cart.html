@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="../Styles/product.css">
-    <title>Product - TrendyThreads</title>
+    <link rel="stylesheet" href="../Styles/cart.css">
+    <title>Cart</title>
 </head>
 <body>
     <div class="user-bar">
@@ -17,7 +17,6 @@
             Cart<span id="cart-count">0</span>
         </div>
     </div>
-    
     
     <div class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -38,11 +37,20 @@
                     </li>
                 </ul>
             </div>
+           
         </div>
         </div>
-    <div class="product-container">
-       <div class="product-details"></div>
-    </div>
+        <div class="cart-container">
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-summary">
+                <p>Total: $<span id="cart-total">0</span></p>
+            </div>
+            <button id="checkout-button">Checkout</button>
+        </div>
+        
+
+
     <div class="bottom-section">
         <div class="address">
             <h4>Our Store Address</h4>
@@ -69,14 +77,19 @@
         <p>&copy; 2023 TrendyThreads. All rights reserved.</p>
     </div>
     
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KtLEt5/BFJyjNRfFf+cu0D5PB7xlZnEk8TAhAuKdGQn+8Z92n0Z4CkOY9iOz6XyB"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-        integrity="sha384-dsQiP6kQ0LlMS3kdKt2+7jrAdSIpO2gS+Swls1i8bZl5+d1ZAxNV8l3OJu0OZfF" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-        integrity="sha384-Pf0F/+yo0iPo7ZjOy8mH8nQLIv8aIV07pV43eLvG9AgRDjhilxdz2j6p0n2O1kr" crossorigin="anonymous"></script>
-        <script type="module" src="../Scripts/product.js"></script>
-        <script type="module" src="../Scripts/navbar.js"></script>
+
+
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KtLEt5/BFJyjNRfFf+cu0D5PB7xlZnEk8TAhAuKdGQn+8Z92n0Z4CkOY9iOz6XyB"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-dsQiP6kQ0LlMS3kdKt2+7jrAdSIpO2gS+Swls1i8bZl5+d1ZAxNV8l3OJu0OZfF" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-Pf0F/+yo0iPo7ZjOy8mH8nQLIv8aIV07pV43eLvG9AgRDjhilxdz2j6p0n2O1kr" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script type="module" src="../Scripts/cart.js"></script>
+    <script type="module" src="../Scripts/navbar.js"></script>
+    
 </body>
 </html>

@@ -146,4 +146,8 @@ button:hover {
 .product h4,
 .product p {
     color: black;
+    
+}
+.product a{
+    text-decoration: none;
 }

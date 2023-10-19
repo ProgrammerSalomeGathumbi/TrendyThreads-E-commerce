@@ -118,8 +118,7 @@ label {
 /* Styles for input fields */
 .sign-container input[type="text"],
 .sign-container input[type="email"],
-.sign-container input[type="tel"],
-.sign-container input[type="password"] {
+.sign-container input[type="tel"] {
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -213,4 +212,36 @@ label {
     margin-top: 20px;
     font-size: 14px;
     color: #555;
+}
+.password-container {
+    position: relative;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Make input fields full width */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.password-container .fa-eye,
+.password-container .fa-eye-slash {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.hide-password {
+    display: none;
+}
+.error-message {
+    color: red;
+    margin-bottom: 10px;
+   display: none;
+     
+}
+.password-error-message{
+    color: red;
+    margin-bottom: 10px;
+   display: none;
 }

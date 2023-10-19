@@ -10,20 +10,14 @@
 </head>
 <body>
     <div class="user-bar">
-        <div id="user-info" class="user-info"></div>
         <div id="sign-in-btn" class="sign-in-btn">
-            <a href="../HTML/signup.html">Sign Up</a>
-        </div>
-        <div id="log-in-btn" class="log-in-btn">
-            <a href="../HTML/login.html">Login</a>
-        </div>
-        <div id="sign-out-btn" class="sign-out-btn">
-            <a >Sign Out</a>
+            <a href="#" id="toggle-auth-btn">Guest Mode</a>
         </div>
         <div id="cart-info" class="cart-info">
-            Cart: <span id="cart-count">0</span>
+            Cart<span id="cart-count">0</span>
         </div>
     </div>
+    
     
     <div class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
@@ -50,18 +44,31 @@
     
    <div class="sign-container">
         <h2>Create an Account</h2>
+        <div id="error-message" class="error-message">Error message will appear here</div>
+
+
         <form>
             <label for="fullName">Full Name:</label>
             <input type="text" id="fullName" placeholder="Full Name" required>
             <label for="signupEmail">Email:</label>
             <input type="email" id="signupEmail" placeholder="Email" required>
+            <div id="email-error-message" class="error-message">Error message will appear here</div>
             <label for="phoneNumber">Phone Number:</label>
             <input type="tel" id="phoneNumber" placeholder="Phone Number" required>
             <label for="signupPassword">Password:</label>
-            <input type="password" id="signupPassword" placeholder="Password" required>
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
-            <button onclick="signUp()">Sign Up</button>
+<div class="password-container">
+    <input type="password" id="signupPassword" placeholder="Password" required>
+    <i id="togglePassword" class="fas fa-eye"></i>
+</div>
+<div id="password-requirements-message" class="password-error-message">Error message will appear here</div> <!-- Password requirements error message -->
+<label for="confirmPassword">Confirm Password:</label>
+<div class="password-container">
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+    <i id="toggleConfirmPassword" class="fas fa-eye"></i>
+</div>
+<div id="password-mismatch-message" class="password-error-message">Error message will appear here</div> <!-- Password mismatch error message -->
+<button type="button" id="signupButton">Sign Up</button>
+
         </form>
     </div>
     
@@ -103,7 +110,8 @@
     integrity="sha384-dsQiP6kQ0LlMS3kdKt2+7jrAdSIpO2gS+Swls1i8bZl5+d1ZAxNV8l3OJu0OZfF" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-Pf0F/+yo0iPo7ZjOy8mH8nQLIv8aIV07pV43eLvG9AgRDjhilxdz2j6p0n2O1kr" crossorigin="anonymous"></script>
-    <script type="module" src="../Scripts/signup.js"></script>
+    
     <script type="module" src="../Scripts/navbar.js"></script>
+    <script type="module" src="../Scripts/signup.js"></script>
 </body> 
 </html>
