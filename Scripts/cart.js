@@ -101,10 +101,11 @@ import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.5.0
   
       // Initial rendering of the cart
       renderCart();
-  
+      
       // Event listener for the checkout button click
       checkoutButton.addEventListener("click", () => {
-          // Redirect to checkout page
-          window.location.href = "checkout.html";
+         
+     // Redirect to checkout page with total price in the URL
+          window.location.href = `checkout.html`;
       });
   });

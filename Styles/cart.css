@@ -231,9 +231,9 @@ label {
     color: #333;
     font-weight: normal;
 }
-.cart-item-image{
-    width: 300px;
-}
 .cart-container {
     text-align: center;
+}
+.cart-item-image{
+    width: 300px;
 }
