@@ -113,7 +113,7 @@ createUserWithEmailAndPassword(auth, email, password)
 
     push(usersRef, newUser)
         .then(() => {
-            // window.location.href = "index.html";
+            
         })
         .catch((error) => {
             console.error("Database storage error:", error);

@@ -24,9 +24,7 @@ import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.5.0
     const user = auth.currentUser;
     const toggleBtn = document.getElementById('toggle-auth-btn');
     const cartIcon = document.getElementById('cart-info'); // Assuming you have a cart icon element with the ID 'cart-icon'
-    toggleBtn.addEventListener('click', () => {
-        window.location.href = 'signup.html';
-    });
+  
     // Event listener for the cart icon
     cartIcon.addEventListener('click', () => {
         window.location.href = 'cart.html'; // Redirect to cart.html when the cart icon is clicked

@@ -50,6 +50,7 @@ import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvide
                 const token = credential.accessToken;
                 const user = result.user;
                 console.log('Google Sign-In Successful:', user);
+                alert('Thank you for signing in!');
                 window.location.href = "about.html";
             })
             .catch((error) => {
