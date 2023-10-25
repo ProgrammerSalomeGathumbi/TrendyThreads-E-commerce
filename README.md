@@ -1,4 +1,4 @@
-## Trendy Threads E-Commerce Website
+## Trendy Threads E-Commerce 
 
 Welcome to Trendy Threads, your go-to destination for stylish t-shirts and hoodies! This basic e-commerce website is designed to showcase our trendy collection and give you a seamless shopping experience. Built with HTML, CSS, and JavaScript, this project serves as a demonstration of fundamental front-end web development skills.
 
